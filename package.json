@@ -1,0 +1,29 @@
+{
+  "name": "react-simple-image-viewer",
+  "version": "0.0.1",
+  "description": "Simple image viewer component for React",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc && cp ./src/*.css ./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alextrsv/react-simple-image-viewer.git"
+  },
+  "author": "Alexander Tarasov",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-component",
+    "image",
+    "image-viewer"
+  ],
+  "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {}
+}
