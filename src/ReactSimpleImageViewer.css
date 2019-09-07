@@ -52,9 +52,9 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
-  opacity: .5;
+  opacity: .2;
   cursor: pointer;
 }
 
@@ -73,9 +73,8 @@ body {
   font-weight: bold;
   display: flex;
   align-items: center;
-  opacity: .3;
-  padding-right: 40px;
-  padding-left: 40px;
+  opacity: .2;
+  padding: 0 15px;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;

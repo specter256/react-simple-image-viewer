@@ -1,6 +1,6 @@
 {
   "name": "react-simple-image-viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple image viewer component for React",
   "main": "lib/index.js",
   "scripts": {
@@ -15,9 +15,13 @@
   "license": "MIT",
   "keywords": [
     "react",
+    "reactjs",
     "react-component",
     "image",
-    "image-viewer"
+    "images",
+    "image-viewer",
+    "lightbox",
+    "gallery"
   ],
   "devDependencies": {
     "@types/react": "^16.9.2",
