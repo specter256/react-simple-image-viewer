@@ -4,7 +4,8 @@
   "description": "Simple image viewer component for React",
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc && cp ./src/*.css ./lib"
+    "build": "tsc && cp ./src/*.css ./lib",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
