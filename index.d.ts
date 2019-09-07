@@ -3,6 +3,7 @@ import * as React from 'react';
 export interface IProps extends React.Props<ReactSimpleImageViewer> {
   src: string[];
   currentIndex?: number;
+  backgroundStyle?: any;
   onClose: () => void;
 }
 

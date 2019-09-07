@@ -1,6 +1,6 @@
 {
   "name": "react-simple-image-viewer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple image viewer component for React",
   "main": "lib/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alextrsv/react-simple-image-viewer.git"
+    "url": "https://github.com/specter256/react-simple-image-viewer.git"
   },
   "author": "Alexander Tarasov",
   "license": "MIT",

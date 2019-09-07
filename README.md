@@ -1,8 +1,8 @@
 # React Simple Image Viewer
 
 [![npm version](https://badge.fury.io/js/react-simple-image-viewer.svg)](https://badge.fury.io/js/react-simple-image-viewer)
-[![Build Status](https://travis-ci.org/alextrsv/react-simple-image-viewer.svg?branch=master)](https://travis-ci.org/alextrsv/react-simple-image-viewer)
-[![Dependency Status](https://david-dm.org/alextrsv/react-simple-image-viewer.svg)](https://david-dm.org/alextrsv/react-simple-image-viewer)
+[![Build Status](https://travis-ci.org/specter256/react-simple-image-viewer.svg?branch=master)](https://travis-ci.org/specter256/react-simple-image-viewer)
+[![Dependency Status](https://david-dm.org/specter256/react-simple-image-viewer.svg)](https://david-dm.org/specter256/react-simple-image-viewer)
 
 Simple image viewer component for React.
 
@@ -75,11 +75,12 @@ render(<App />, document.getElementById('app'));
 
 # API
 
-| Property      |  Type     | Description                                                                                                                                                   |
-| :------------ | :-------: | :-------------------------------------------------------------------------------- |
-| src           | string[]  | Array of image URLs                                                               |
-| currentIndex  | number    | Index of image in `src` property which will be shown first when viewer is opened  |
-| onClose       | Function  | Callback which will be called when viewer will closed                             |
+| Property        |  Type     | Description                                                                                                                                                   |
+| :-------------- | :-------- | :-------------------------------------------------------------------------------- |
+| src             | string[]  | Array of image URLs                                                               |
+| currentIndex    | number    | Index of image in `src` property which will be shown first when viewer is opened  |
+| onClose         | function  | Callback which will be called when viewer will closed                             |
+| backgroundStyle | object    | Custom styles for background of modal window                                      |
 
 # Shortcuts
 

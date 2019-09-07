@@ -4,6 +4,7 @@ import './ReactSimpleImageViewer.css';
 interface IProps {
   src: string[];
   currentIndex?: number;
+  backgroundStyle?: any;
   onClose: () => void;
 }
 
@@ -93,6 +94,7 @@ export default class ReactSimpleImageViewer extends React.Component<IProps, ISta
         className="modal"
         onKeyDown={this.handleKeyDown}
         onClick={this.handleClick}
+        style={this.props.backgroundStyle}
       >
         <span className="close" onClick={this.callOnClose}>
           &times;
