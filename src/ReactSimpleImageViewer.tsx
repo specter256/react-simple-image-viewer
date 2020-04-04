@@ -71,7 +71,7 @@ export default class ReactSimpleImageViewer extends React.Component<IProps, ISta
   }
 
   private handleClick(event: any) {
-    if (event.target && event.target.id === 'ImageViewer') {
+    if (event.target && event.target.id === 'ReactSimpleImageViewer') {
       this.callOnClose();
     }
   }
@@ -90,26 +90,26 @@ export default class ReactSimpleImageViewer extends React.Component<IProps, ISta
 
     return (
       <div
-        id="ImageViewer"
-        className="modal"
+        id="ReactSimpleImageViewer"
+        className="react-simple-image-viewer__modal"
         onKeyDown={this.handleKeyDown}
         onClick={this.handleClick}
         style={this.props.backgroundStyle}
       >
-        <span className="close" onClick={this.callOnClose}>
+        <span className="react-simple-image-viewer__close" onClick={this.callOnClose}>
           &times;
         </span>
 
-        <span className="previous" onClick={() => this.changeImage(-1)}>
+        <span className="react-simple-image-viewer__previous" onClick={() => this.changeImage(-1)}>
           &#10094;
         </span>
 
-        <span className="next" onClick={() => this.changeImage(1)}>
+        <span className="react-simple-image-viewer__next" onClick={() => this.changeImage(1)}>
           &#10095;
         </span>
 
-        <div className="modal-content">
-          <div className="slide">
+        <div className="react-simple-image-viewer__modal-content">
+          <div className="react-simple-image-viewer__slide">
             <img src={src[currentIndex]} alt=""/>
           </div>
         </div>
