@@ -1,6 +1,6 @@
 {
   "name": "react-simple-image-viewer",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Simple image viewer component for React",
   "main": "dist/index.js",
   "scripts": {
