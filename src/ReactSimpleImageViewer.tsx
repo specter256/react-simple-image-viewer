@@ -1,5 +1,5 @@
 import React from 'react';
-import './ReactSimpleImageViewer.css';
+import { Wrapper, Content, Slide, Image, Close, Prev, Next } from './styles';
 
 interface IProps {
   src: string[];
@@ -89,31 +89,30 @@ export default class ReactSimpleImageViewer extends React.Component<IProps, ISta
     const { currentIndex } = this.state;
 
     return (
-      <div
+      <Wrapper
         id="ReactSimpleImageViewer"
-        className="react-simple-image-viewer__modal"
         onKeyDown={this.handleKeyDown}
         onClick={this.handleClick}
         style={this.props.backgroundStyle}
       >
-        <span className="react-simple-image-viewer__close" onClick={this.callOnClose}>
+        <Close onClick={this.callOnClose}>
           &times;
-        </span>
+        </Close>
 
-        <span className="react-simple-image-viewer__previous" onClick={() => this.changeImage(-1)}>
+        <Prev onClick={() => this.changeImage(-1)}>
           &#10094;
-        </span>
+        </Prev>
 
-        <span className="react-simple-image-viewer__next" onClick={() => this.changeImage(1)}>
+        <Next onClick={() => this.changeImage(1)}>
           &#10095;
-        </span>
+        </Next>
 
-        <div className="react-simple-image-viewer__modal-content">
-          <div className="react-simple-image-viewer__slide">
-            <img src={src[currentIndex]} alt=""/>
-          </div>
-        </div>
-      </div>
+        <Content>
+          <Slide>
+            <Image src={src[currentIndex]} alt=""/>
+          </Slide>
+        </Content>
+      </Wrapper>
     );
   }
 }

@@ -1,10 +1,10 @@
 {
   "name": "react-simple-image-viewer",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple image viewer component for React",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && cp ./src/*.css ./lib",
+    "build": "tsc",
     "prepare": "npm run build"
   },
   "repository": {
@@ -26,8 +26,10 @@
   "devDependencies": {
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
+    "@types/styled-components": "4.1.8",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "styled-components": "^4.4.1",
     "typescript": "^3.6.2"
   },
   "dependencies": {}
