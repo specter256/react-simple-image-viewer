@@ -93,22 +93,23 @@ export default class ReactSimpleImageViewer extends React.Component<IProps, ISta
         id="ReactSimpleImageViewer"
         onKeyDown={this.handleKeyDown}
         onClick={this.handleClick}
+        className="react-simple-image-viewer__modal"
         style={this.props.backgroundStyle}
       >
-        <Close onClick={this.callOnClose}>
+        <Close className="react-simple-image-viewer__close" onClick={this.callOnClose}>
           &times;
         </Close>
 
-        <Prev onClick={() => this.changeImage(-1)}>
+        <Prev className="react-simple-image-viewer__previous" onClick={() => this.changeImage(-1)}>
           &#10094;
         </Prev>
 
-        <Next onClick={() => this.changeImage(1)}>
+        <Next className="react-simple-image-viewer__next" onClick={() => this.changeImage(1)}>
           &#10095;
         </Next>
 
-        <Content>
-          <Slide>
+        <Content className="react-simple-image-viewer__modal-content">
+          <Slide className="react-simple-image-viewer__slide">
             <Image src={src[currentIndex]} alt=""/>
           </Slide>
         </Content>
