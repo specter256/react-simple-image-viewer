@@ -1,1 +1,2 @@
-export * from './ReactSimpleImageViewer';
+import ReactSimpleImageViewer from "./ReactSimpleImageViewer";
+export default ReactSimpleImageViewer;
