@@ -1,6 +1,6 @@
 {
   "name": "react-simple-image-viewer",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Simple image viewer component for React",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
