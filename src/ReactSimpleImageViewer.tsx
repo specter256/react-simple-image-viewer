@@ -17,7 +17,7 @@ const ReactSimpleImageViewer = (props: IProps) => {
       if (nextIndex < 0) nextIndex = props.src.length - 1;
       setCurrentIndex(nextIndex);
     },
-    [setCurrentIndex]
+    [currentIndex]
   );
 
   const handleClick = useCallback(
