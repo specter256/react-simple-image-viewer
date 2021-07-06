@@ -2,9 +2,11 @@
   "name": "react-simple-image-viewer",
   "version": "0.0.8",
   "description": "Simple image viewer component for React",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types",
   "scripts": {
-    "build": "tsc",
+    "build": "rollup -c",
     "prepare": "npm run build"
   },
   "repository": {
@@ -24,14 +26,20 @@
     "gallery"
   ],
   "devDependencies": {
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
-    "@types/styled-components": "4.1.8",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "typescript": "^3.6.2"
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/css-modules": "^1.0.2",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "postcss": "^8.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.51.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2"
   },
-  "dependencies": {
-    "styled-components": "^4.4.1"
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   }
 }
