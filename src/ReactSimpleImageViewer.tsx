@@ -5,6 +5,7 @@ interface IProps {
   src: string[];
   currentIndex?: number;
   backgroundStyle?: CSSProperties;
+  disableScroll?: boolean;
   onClose?: () => void;
 }
 
@@ -59,11 +60,17 @@ const ReactSimpleImageViewer = (props: IProps) => {
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
-    document.addEventListener("wheel", handleWheel);
+
+    if (!props.disableScroll) {
+      document.addEventListener("wheel", handleWheel);
+    }
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      document.removeEventListener("wheel", handleWheel);
+
+      if (!props.disableScroll) {
+        document.removeEventListener("wheel", handleWheel);
+      }
     };
   }, [handleKeyDown, handleWheel]);
 

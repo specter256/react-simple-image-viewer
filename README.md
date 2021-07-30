@@ -52,13 +52,15 @@ function App() {
           width="300"
           key={ index }
           style={{ margin: '2px' }}
-          alt=""/>
+          alt=""
+        />
       ))}
 
       {isViewerOpen && (
         <ImageViewer
           src={ images }
           currentIndex={ currentImage }
+          disableScroll={ false }
           onClose={ closeImageViewer }
         />
       )}
@@ -81,6 +83,7 @@ render(<App />, document.getElementById('app'));
 | currentIndex    | number    | Index of image in `src` property which will be shown first when viewer is opened  |
 | onClose         | function  | Callback which will be called when viewer will closed                             |
 | backgroundStyle | object    | Custom styles for background of modal window                                      |
+| disableScroll   | boolean   | Disable scrolling images by mouse wheel                                           |
 
 # Shortcuts
 
