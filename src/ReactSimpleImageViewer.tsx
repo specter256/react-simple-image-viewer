@@ -6,6 +6,7 @@ interface IProps {
   currentIndex?: number;
   backgroundStyle?: CSSProperties;
   disableScroll?: boolean;
+  closeOnClickOutside?: boolean;
   onClose?: () => void;
 }
 
@@ -23,7 +24,15 @@ const ReactSimpleImageViewer = (props: IProps) => {
 
   const handleClick = useCallback(
     (event: any) => {
-      if (event.target && event.target.id === "ReactSimpleImageViewer") {
+      if (!event.target || !props.closeOnClickOutside) {
+        return;
+      }
+
+      const checkId = event.target.id === 'ReactSimpleImageViewer';
+      const checkClass = event.target.classList.contains('react-simple-image-viewer__slide');
+
+      if (checkId || checkClass) {
+        event.stopPropagation();
         props.onClose?.();
       }
     },
@@ -109,6 +118,7 @@ const ReactSimpleImageViewer = (props: IProps) => {
 
       <div
         className={`${styles.content} react-simple-image-viewer__modal-content`}
+        onClick={handleClick}
       >
         <div className={`${styles.slide} react-simple-image-viewer__slide`}>
           <img className={styles.image} src={props.src[currentIndex]} alt="" />

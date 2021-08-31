@@ -61,6 +61,7 @@ function App() {
           src={ images }
           currentIndex={ currentImage }
           disableScroll={ false }
+          closeOnClickOutside={ true }
           onClose={ closeImageViewer }
         />
       )}
@@ -77,17 +78,18 @@ render(<App />, document.getElementById('app'));
 
 # API
 
-| Property        |  Type     | Description                                                                                                                                                   |
+| Property        |  Type     | Description                                                                       |
 | :-------------- | :-------- | :-------------------------------------------------------------------------------- |
 | src             | string[]  | Array of image URLs                                                               |
 | currentIndex    | number    | Index of image in `src` property which will be shown first when viewer is opened  |
 | onClose         | function  | Callback which will be called when viewer will closed                             |
 | backgroundStyle | object    | Custom styles for background of modal window                                      |
 | disableScroll   | boolean   | Disable scrolling images by mouse wheel                                           |
+| closeOnClickOutside   | boolean   | Whether viewer should be closed when clicking outside of image              |
 
 # Shortcuts
 
-| Shortcut        | Description                                                                                                                                                   |
+| Shortcut        | Description                     |
 | :-------------- | :------------------------------ |
 | Escape          | Close the viewer                |
 | Right Arrow / l | Next image                      |
