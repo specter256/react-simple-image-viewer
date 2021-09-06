@@ -79,3 +79,9 @@
 .next {
   right: 0;
 }
+
+@media (max-width: 900px) {
+  .wrapper {
+    padding: 0;
+  }
+}
