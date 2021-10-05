@@ -9,11 +9,11 @@ Simple image viewer component for React.
 # Installation
 
 ```shell
-$ npm install react-simple-image-viewer
+npm install react-simple-image-viewer
 ```
-or
+or with yarn
 ```shell
-$ yarn add react-simple-image-viewer
+yarn add react-simple-image-viewer
 ```
 
 # Example
