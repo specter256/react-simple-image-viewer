@@ -8,6 +8,9 @@ interface IProps {
   disableScroll?: boolean;
   closeOnClickOutside?: boolean;
   onClose?: () => void;
+  closeComponent?: JSX.Element;
+  leftArrowComponent?: JSX.Element;
+  rightArrowComponent?: JSX.Element;
 }
 
 const ReactSimpleImageViewer = (props: IProps) => {
@@ -95,7 +98,7 @@ const ReactSimpleImageViewer = (props: IProps) => {
         className={`${styles.close} react-simple-image-viewer__close`}
         onClick={() => props.onClose?.()}
       >
-        &times;
+        { props.closeComponent || "×" }
       </span>
 
       {props.src.length > 1 && (
@@ -103,7 +106,7 @@ const ReactSimpleImageViewer = (props: IProps) => {
           className={`${styles.navigation} ${styles.prev} react-simple-image-viewer__previous`}
           onClick={() => changeImage(-1)}
         >
-          &#10094;
+          { props.leftArrowComponent || "❮" }
         </span>
       )}
 
@@ -112,7 +115,7 @@ const ReactSimpleImageViewer = (props: IProps) => {
           className={`${styles.navigation} ${styles.next} react-simple-image-viewer__next`}
           onClick={() => changeImage(1)}
         >
-          &#10095;
+          { props.rightArrowComponent || "❯" }
         </span>
       )}
 
