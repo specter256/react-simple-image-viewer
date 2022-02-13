@@ -2,7 +2,6 @@
 
 [![npm version](https://badge.fury.io/js/react-simple-image-viewer.svg)](https://badge.fury.io/js/react-simple-image-viewer)
 [![Build Status](https://travis-ci.org/specter256/react-simple-image-viewer.svg?branch=master)](https://travis-ci.org/specter256/react-simple-image-viewer)
-[![Dependency Status](https://david-dm.org/specter256/react-simple-image-viewer.svg)](https://david-dm.org/specter256/react-simple-image-viewer)
 
 Simple image viewer component for React.
 
@@ -86,6 +85,9 @@ render(<App />, document.getElementById('app'));
 | backgroundStyle | object    | Custom styles for background of modal window                                      |
 | disableScroll   | boolean   | Disable scrolling images by mouse wheel                                           |
 | closeOnClickOutside   | boolean   | Whether viewer should be closed when clicking outside of image              |
+| closeComponent | JSX.Element | Custom component for the close button |
+| leftArrowComponent | JSX.Element | Custom component for the left arrow |
+| rightArrowComponent | JSX.Element | Custom component for the right arrow |
 
 # Shortcuts
 
