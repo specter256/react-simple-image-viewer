@@ -10,7 +10,6 @@
   height: 100%;
   background-color: black;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .content {
@@ -93,11 +92,15 @@
   }
 }
 
-.counter {
+.counterContainer {
   position: absolute;
-  margin:0 auto;
   bottom: 15px;
-  font-size: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.counter {
+  font-size: 16px;
   color: white;
   background-color: #777777;
   border-radius: 4px;

@@ -141,10 +141,14 @@ const ReactSimpleImageViewer = (props: IProps) => {
       </div>
 
       {props.showCounter && (
-        <div
-          className={`react-simple-image-viewer__counter`}
-        >
-          {props.counterComponent || <div className={styles.counter}>{currentIndex} / {dataLength}</div>}
+        <div className={`react-simple-image-viewer__counter`}>
+          {props.counterComponent || (
+            <div className={styles.counterContainer}>
+              <span className={styles.counter}>
+                {currentIndex} / {dataLength}
+              </span>
+            </div>
+          )}
         </div>
       )}
     </div>
