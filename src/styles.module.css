@@ -10,6 +10,7 @@
   height: 100%;
   background-color: black;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .content {
@@ -90,4 +91,11 @@
   .wrapper {
     padding: 0;
   }
+}
+
+.counter {
+  color: white;
+  background-color: #777777;
+  border-radius: 4px;
+  opacity: 0.5;
 }

@@ -1,4 +1,10 @@
-import React, { CSSProperties, useCallback, useEffect, useState } from "react";
+import React, {
+  CSSProperties,
+  useCallback,
+  useEffect,
+  useState,
+  useMemo,
+} from "react";
 import styles from "./styles.module.css";
 
 interface IProps {
@@ -11,15 +17,19 @@ interface IProps {
   closeComponent?: JSX.Element;
   leftArrowComponent?: JSX.Element;
   rightArrowComponent?: JSX.Element;
+  showCounter?: boolean;
+  counterComponent?: JSX.Element;
 }
 
 const ReactSimpleImageViewer = (props: IProps) => {
   const [currentIndex, setCurrentIndex] = useState(props.currentIndex ?? 0);
 
+  const dataLength = useMemo(() => props.src.length, [props.src]);
+
   const changeImage = useCallback(
     (delta: number) => {
-      let nextIndex = (currentIndex + delta) % props.src.length;
-      if (nextIndex < 0) nextIndex = props.src.length - 1;
+      let nextIndex = (currentIndex + delta) % dataLength;
+      if (nextIndex < 0) nextIndex = dataLength - 1;
       setCurrentIndex(nextIndex);
     },
     [currentIndex]
@@ -31,8 +41,10 @@ const ReactSimpleImageViewer = (props: IProps) => {
         return;
       }
 
-      const checkId = event.target.id === 'ReactSimpleImageViewer';
-      const checkClass = event.target.classList.contains('react-simple-image-viewer__slide');
+      const checkId = event.target.id === "ReactSimpleImageViewer";
+      const checkClass = event.target.classList.contains(
+        "react-simple-image-viewer__slide"
+      );
 
       if (checkId || checkClass) {
         event.stopPropagation();
@@ -98,24 +110,24 @@ const ReactSimpleImageViewer = (props: IProps) => {
         className={`${styles.close} react-simple-image-viewer__close`}
         onClick={() => props.onClose?.()}
       >
-        { props.closeComponent || "×" }
+        {props.closeComponent || "×"}
       </span>
 
-      {props.src.length > 1 && (
+      {dataLength > 1 && (
         <span
           className={`${styles.navigation} ${styles.prev} react-simple-image-viewer__previous`}
           onClick={() => changeImage(-1)}
         >
-          { props.leftArrowComponent || "❮" }
+          {props.leftArrowComponent || "❮"}
         </span>
       )}
 
-      {props.src.length > 1 && (
+      {dataLength > 1 && (
         <span
           className={`${styles.navigation} ${styles.next} react-simple-image-viewer__next`}
           onClick={() => changeImage(1)}
         >
-          { props.rightArrowComponent || "❯" }
+          {props.rightArrowComponent || "❯"}
         </span>
       )}
 
@@ -127,6 +139,15 @@ const ReactSimpleImageViewer = (props: IProps) => {
           <img className={styles.image} src={props.src[currentIndex]} alt="" />
         </div>
       </div>
+
+      {props.showCounter && (
+        <div
+          className={`${styles.navigation} ${styles.prev} react-simple-image-viewer__counter`}
+          onClick={() => changeImage(-1)}
+        >
+          {props.counterComponent || <div className={styles.counter}>{currentIndex} / {dataLength}</div>}
+        </div>
+      )}
     </div>
   );
 };
