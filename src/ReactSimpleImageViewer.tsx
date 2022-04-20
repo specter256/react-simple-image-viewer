@@ -142,8 +142,7 @@ const ReactSimpleImageViewer = (props: IProps) => {
 
       {props.showCounter && (
         <div
-          className={`${styles.navigation} ${styles.prev} react-simple-image-viewer__counter`}
-          onClick={() => changeImage(-1)}
+          className={`react-simple-image-viewer__counter`}
         >
           {props.counterComponent || <div className={styles.counter}>{currentIndex} / {dataLength}</div>}
         </div>
