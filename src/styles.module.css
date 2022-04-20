@@ -1,8 +1,8 @@
 .wrapper {
-  z-index: 1;
+  z-index: 10;
   display: flex;
   align-items: center;
-  position: fixed;
+  position: absolute;
   padding: 0px 60px 0px 60px;
   left: 0;
   top: 0;
@@ -94,6 +94,10 @@
 }
 
 .counter {
+  position: absolute;
+  margin:0 auto;
+  bottom: 15px;
+  font-size: 40px;
   color: white;
   background-color: #777777;
   border-radius: 4px;
