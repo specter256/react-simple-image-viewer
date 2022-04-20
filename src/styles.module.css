@@ -2,7 +2,7 @@
   z-index: 10;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   padding: 0px 60px 0px 60px;
   left: 0;
   top: 0;
@@ -105,4 +105,5 @@
   background-color: #777777;
   border-radius: 4px;
   opacity: 0.5;
+  padding: 2px 4px;
 }
