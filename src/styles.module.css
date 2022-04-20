@@ -1,5 +1,5 @@
 .wrapper {
-  z-index: 1;
+  z-index: 10;
   display: flex;
   align-items: center;
   position: fixed;
@@ -90,4 +90,20 @@
   .wrapper {
     padding: 0;
   }
+}
+
+.counterContainer {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.counter {
+  font-size: 16px;
+  color: white;
+  background-color: #777777;
+  border-radius: 4px;
+  opacity: 0.5;
+  padding: 4px 8px;
 }
