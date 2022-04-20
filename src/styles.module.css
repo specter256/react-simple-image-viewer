@@ -39,9 +39,8 @@
 .close {
   color: white;
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 15px;
-  font-size: 40px;
   font-weight: bold;
   opacity: 0.2;
   cursor: pointer;
