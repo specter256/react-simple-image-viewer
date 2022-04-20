@@ -84,6 +84,7 @@ const ReactSimpleImageViewer = (props: IProps) => {
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = 'hidden';
 
     if (!props.disableScroll) {
       document.addEventListener("wheel", handleWheel);
@@ -91,6 +92,7 @@ const ReactSimpleImageViewer = (props: IProps) => {
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = '';
 
       if (!props.disableScroll) {
         document.removeEventListener("wheel", handleWheel);
