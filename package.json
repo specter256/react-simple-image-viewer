@@ -1,6 +1,6 @@
 {
   "name": "react-simple-image-viewer",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Simple image viewer component for React",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/specter256/react-simple-image-viewer.git"
+    "url": "https://github.com/meksiabdou/react-simple-image-viewer.git"
   },
   "author": "Alexander Tarasov",
   "license": "MIT",

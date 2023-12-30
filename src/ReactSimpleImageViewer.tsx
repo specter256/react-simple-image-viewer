@@ -11,6 +11,7 @@ interface IProps {
   closeComponent?: JSX.Element;
   leftArrowComponent?: JSX.Element;
   rightArrowComponent?: JSX.Element;
+  imageProps?: any;
 }
 
 const ReactSimpleImageViewer = (props: IProps) => {
@@ -124,7 +125,7 @@ const ReactSimpleImageViewer = (props: IProps) => {
         onClick={handleClick}
       >
         <div className={`${styles.slide} react-simple-image-viewer__slide`}>
-          <img className={styles.image} src={props.src[currentIndex]} alt="" />
+          <img className={styles.image} {...props.imageProps} src={props.src[currentIndex]} alt="" />
         </div>
       </div>
     </div>
