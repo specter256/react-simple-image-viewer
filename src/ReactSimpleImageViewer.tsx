@@ -5,6 +5,7 @@ interface IProps {
   src: string[];
   currentIndex?: number;
   backgroundStyle?: CSSProperties;
+  imageStyle?: CSSProperties;
   disableScroll?: boolean;
   closeOnClickOutside?: boolean;
   onClose?: () => void;
@@ -124,7 +125,7 @@ const ReactSimpleImageViewer = (props: IProps) => {
         onClick={handleClick}
       >
         <div className={`${styles.slide} react-simple-image-viewer__slide`}>
-          <img className={styles.image} src={props.src[currentIndex]} alt="" />
+          <img className={styles.image} src={props.src[currentIndex]} alt="" style={imageStyle} />
         </div>
       </div>
     </div>
