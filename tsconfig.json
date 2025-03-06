@@ -4,7 +4,7 @@
     "target": "es2016",
     "module": "esnext",
     "declaration": true,
-    "declarationDir": "types",
+    "declarationDir": "dist",
     "noImplicitAny": true,
     "strictNullChecks": true,
     "removeComments": true,

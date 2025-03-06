@@ -91,3 +91,16 @@
     padding: 0;
   }
 }
+
+.caption {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    opacity: 0.75;
+    text-align: center;
+    width: 100%;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}

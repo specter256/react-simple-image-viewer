@@ -1,5 +1,6 @@
 MIT License
 
+Copyright (c) 2025 Edward Niewold
 Copyright (c) 2019 Alexander Tarasov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
